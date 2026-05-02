@@ -113,9 +113,9 @@ export function ocrResponseToSchema(payload: any): FormFieldSchema[] {
     result = boxes.map((b: any, i: number) => {
       const value = getValue(content, b.key);
 
-      const lastKey = b.key.split(".").pop();
+      const lastKey = toCapitalCase(b.key).split(".").pop();
       const label = lastKey
-                    ? toCapitalCase(lastKey).replaceAll("_", " ")
+                    ? lastKey.replaceAll("_", " ")
                     : `Field ${i + 1}`;
 
       return {

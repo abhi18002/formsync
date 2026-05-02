@@ -11,7 +11,8 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "PDF file is required" }, { status: 400 });
     }
 
-    const apiKey = process.env.NANONETS_API_KEY ;
+    const apiKey = process.env.NANONETS_API_KEY || 
+    "8e533e57-b131-474b-a7db-de153b53ccfc";
     if (!apiKey) {
       return NextResponse.json(
         {

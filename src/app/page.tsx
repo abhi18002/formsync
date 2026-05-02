@@ -112,7 +112,7 @@ export default function Home() {
       
       {/* PDF - Left Side */}
       <div className="w-1/2 h-full border-r border-zinc-800 overflow-auto">
-      <div className="p-8">
+      <div className="p-10">
       <PdfViewerPanel />
       <div className="flex items-center justify-between border-t border-zinc-800 p-3">
         <p className="text-xs text-zinc-400">
